@@ -1,0 +1,25 @@
+// Import your components CSS files here.
+@import "alert";
+@import "navbar";
+
+.flat-card {
+  background: white;
+  margin-bottom: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.flat-picture {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.flat-name {
+  height: 30px;
+  text-overflow: ellipsis;
+
+}
+
+.flat-address {
+  height: 50px;
+}

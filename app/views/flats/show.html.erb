@@ -1,0 +1,13 @@
+<%= image_tag @flat.picture, class: "picture" %>
+
+<div class="container">
+  <div class="details">
+    <div class="details-book"></div>
+    <div class="details-details"><p><i class="fas fa-users"></i> <%= @flat.number_of_guests %> <i class="fas fa-euro-sign"></i> <%= @flat.price_per_night %></p></div>
+    <div class="details-share"><p>Share</p><i class="fab fa-facebook-square"></i><i class="fab fa-twitter-square"></i><i class="fab fa-pinterest-square"></i><i class="fas fa-envelope-square"></i></div>
+  </div>
+  <div class="main">
+    <div class="main-title"><h2><%= @flat.name %></h2><p><%= @flat.address %></p></div>
+    <div class="main-description"><h3>A bit more about this flat...</h3><p><%= @flat.description %></p></div>
+  </div>
+</div>

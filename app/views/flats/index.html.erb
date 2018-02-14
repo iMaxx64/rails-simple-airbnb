@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row"><h4>All our flats</h4></div>
+
+  <div class="row"><p>You searched for. We found 3 flats out of our 3 on our website.</p></div>
+
+  <div class="row">
+    <% @flats.each do |flat| %>
+    <div class="col-xs-4">
+      <div class="flat-card">
+          <%= image_tag flat.picture, class:"flat-picture" %>
+        <div class="flat-content">
+          <h5><%= flat.name %></h5>
+          <p><%= flat.address %></p>
+          <p><i class="fas fa-users"></i> <%= flat.number_of_guests %> <i class="fas fa-euro-sign"></i> <%= flat.price_per_night %></p>
+        </div>
+        <div class="flat-actions">
+          <%= link_to "More info", flat_path(flat) %>
+          <%= link_to "Edit", edit_flat_path(flat) %>
+          <%= link_to "Remove", flat_path(flat), method: :delete, data: { confirm: "Are you sure?"} %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
